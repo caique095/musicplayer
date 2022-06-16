@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&display=swap');
+
+:root{
+    --preto: #000000;
+    --laranja: #ffa600;
+    --laranja-hover:#b86200;
+    --cinza: #ffffff57;
+    --cinza-escuro: #202020;
+    --cinza-claro: #dedddd;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    background-image: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1124&q=100');
+    background-position: center;
+    background-size: 100%;
+}
+
+.player{
+    color: var(--cinza-claro);
+    box-shadow: 0px 6px 15px var(--preto);
+    width: 400px;
+    overflow: hidden;
+    position: relative;
+    padding: 25px 30px;
+    text-align: center;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: var(--cinza);
+    border-radius: 12px;
+    border: none;
+}
+
+.barra-topo span{
+    font-size: 18px;  
+}
+
+.img-musica{
+    height: 256px;
+    width: 100%;
+    box-shadow: 0px 10px 40px var(--cinza-escuro);
+    border-radius: 15px;
+    margin: 25px 0;
+    overflow: hidden;
+}
+
+.img-musica img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.tempo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.tempo span{
+    font-size: 13px;
+}
+
+/* ---------- INFORMAÇÕES DA MÚSICA ---------- */
+
+.sobre-musica{
+    text-align: center;
+    margin: 10px 0;
+}
+
+.nome{
+    font-size: 21px;
+}
+
+.artista{
+    font-size: 15px;
+    opacity: 0.9;
+    color: var(--laranja);
+}
+
+/* ---------- BARRA DE PROGRESSO ---------- */
+
+.duracao{
+    width: 332px;
+    margin: 20px 0;
+}
+
+.barra{
+    width: 100%;
+    height: 3px;
+    border: none;
+    border-radius: 15px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: var(--laranja);
+    margin-bottom: 5px;
+}
+
+progress{
+    height: 3px;
+    width: 0%;
+}
+
+.ponto{
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--laranja);
+    margin-left: -2px;
+}
+
+/* ---------- CONTROLES ---------- */
+
+.controles{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.controles i{
+    font-size: 30px;
+    user-select: none;
+}
+
+/* ---------- BOTÕES ---------- */
+
+.bx{
+    cursor: pointer;
+}
+
+.bx:hover {
+    color: var(--laranja);
+}
+
+.bx-play:hover, .bx-pause:hover{
+    transform: scale(1.3);
+    transition: 0.5s;
+}
+
+.bx:active{
+    color: var(--laranja-hover);
+}
